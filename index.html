@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EDNS Soft — 모바일 앱 개발</title>
+  <meta name="description" content="EDNS Soft는 일상에 필요한 모바일 앱을 개발합니다. 킨토리의 진료 기록, 병원·약국 비용 및 실비 처리 상태 관리 기능을 소개합니다.">
+  <!-- Google Search Console에서 HTML 태그 인증을 선택하면 받은 인증 태그를 이곳에 추가합니다. -->
+  <style>
+    :root { color-scheme: light; --ink:#172740; --muted:#627085; --blue:#105bff; --line:#e2e8f0; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:28px; }
+    body { margin:0; background:#fafbfd; color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif; line-height:1.7; }
+    a { color:inherit; }
+    a:focus-visible { outline:3px solid var(--blue); outline-offset:5px; }
+    .wrap { width:min(1060px,calc(100% - 48px)); margin:auto; }
+    header { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:28px 0; }
+    .brand { display:flex; gap:12px; align-items:center; text-decoration:none; font-size:21px; font-weight:800; letter-spacing:-.5px; }
+    .mark { display:grid; place-items:center; width:40px; height:40px; border-radius:12px; background:var(--blue); color:white; font-size:15px; letter-spacing:-1px; }
+    nav { display:flex; gap:25px; font-size:14px; font-weight:600; }
+    nav a { text-decoration:none; }
+    nav a:hover { color:var(--blue); }
+    .hero { padding:85px 0 82px; max-width:760px; }
+    .eyebrow { margin:0 0 18px; color:var(--blue); font-size:13px; font-weight:800; letter-spacing:1.5px; }
+    h1 { margin:0; font-size:clamp(36px,5.2vw,60px); line-height:1.25; letter-spacing:-2px; font-weight:800; word-break:keep-all; }
+    .intro { margin:25px 0 0; font-size:19px; color:var(--muted); word-break:keep-all; }
+    .app { display:grid; grid-template-columns:220px 1fr; gap:48px; align-items:start; padding:48px; border:1px solid #e9dfd1; border-radius:28px; background:#fff8ee; }
+    .app-badge { display:flex; align-items:center; gap:15px; }
+    .app-symbol { display:grid; place-items:center; width:64px; height:64px; border-radius:19px; background:#ffe8c6; color:#775630; }
+    .app-symbol svg { width:36px; height:36px; }
+    .app-name { margin:0; font-size:27px; font-weight:800; letter-spacing:-1px; }
+    .app-label { margin:5px 0 0; font-size:13px; color:#856a49; }
+    h2 { margin:0 0 14px; font-size:clamp(25px,3vw,34px); letter-spacing:-1px; line-height:1.4; word-break:keep-all; }
+    .app-desc { margin:0; color:#6d6254; font-size:16px; word-break:keep-all; }
+    .features { margin:28px 0 0; padding:0; list-style:none; display:grid; gap:16px; }
+    .features li { display:flex; align-items:baseline; gap:13px; }
+    .number { flex:none; font-size:12px; font-weight:800; color:#ad8050; }
+    .features strong { display:block; font-size:16px; }
+    .features p { margin:3px 0 0; font-size:14px; color:#796e5f; word-break:keep-all; }
+    .contact { display:flex; justify-content:space-between; align-items:center; gap:30px; padding:65px 0; }
+    .contact h2 { font-size:27px; margin-bottom:8px; }
+    .contact p { margin:0; color:var(--muted); font-size:15px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; min-height:50px; padding:12px 23px; border-radius:12px; background:var(--ink); color:white; text-decoration:none; font-size:14px; font-weight:600; white-space:nowrap; }
+    .button:hover { background:var(--blue); }
+    footer { padding:24px 0 30px; border-top:1px solid var(--line); color:var(--muted); font-size:12px; }
+    @media (max-width:700px) {
+      .wrap { width:calc(100% - 36px); }
+      header { padding:23px 0; }
+      nav { gap:16px; font-size:13px; }
+      .brand { font-size:18px; gap:9px; }
+      .mark { width:35px; height:35px; }
+      .hero { padding:48px 0; }
+      h1 { letter-spacing:-1.3px; }
+      .intro { font-size:16px; }
+      .app { grid-template-columns:1fr; gap:26px; padding:28px 24px; border-radius:22px; }
+      .contact { flex-direction:column; align-items:flex-start; gap:22px; padding:45px 0; }
+      .button { white-space:normal; overflow-wrap:anywhere; }
+    }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#home" aria-label="EDNS Soft 홈"><span class="mark" aria-hidden="true">ES</span>EDNS Soft</a>
+      <nav aria-label="메인 메뉴"><a href="#kintory">앱 소개</a><a href="#contact">문의</a></nav>
+    </header>
+    <main id="home">
+      <section class="hero" aria-labelledby="headline">
+        <p class="eyebrow">EDNS SOFT</p>
+        <h1 id="headline">일상을 더 편하게 만드는<br>모바일 앱.</h1>
+        <p class="intro">EDNS Soft는 일상에 필요한 모바일 앱을 개발합니다.<br>기록하고 정리하는 일을 더 쉽고 편하게 만듭니다.</p>
+      </section>
+      <section class="app" id="kintory" aria-labelledby="app-heading">
+        <div>
+          <div class="app-badge">
+            <span class="app-symbol" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M20 10c-5-4-10-4-15-2v24c5-2 10-2 15 2 5-4 10-4 15-2V8c-5-2-10-2-15 2Z" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/><path d="M20 10v24M10 15h5M10 21h5M25 15h5M25 21h5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></span>
+            <p class="app-name">킨토리</p>
+          </div>
+          <p class="app-label">개인과 가족의 진료 기록 관리</p>
+        </div>
+        <div>
+          <h2 id="app-heading">내 진료를, 차곡차곡.</h2>
+          <p class="app-desc">진료 기록부터 병원·약국 비용, 실비 처리 상태까지.<br>개인과 가족의 기록을 한곳에서 정리하는 앱입니다.</p>
+          <ul class="features">
+            <li><span class="number">01</span><div><strong>진료 기록</strong><p>언제, 어느 병원에서 어떤 진료를 받았는지 남겨보세요.</p></div></li>
+            <li><span class="number">02</span><div><strong>비용과 실비 관리</strong><p>결제한 병원·약국 비용, 청구 상태와 실제 받은 보험금을 기록하세요.</p></div></li>
+            <li><span class="number">03</span><div><strong>가족별 기록 정리</strong><p>프로필을 나누어 각자의 진료 기록과 비용을 확인하세요.</p></div></li>
+          </ul>
+        </div>
+      </section>
+      <section class="contact" id="contact" aria-labelledby="contact-heading">
+        <div><h2 id="contact-heading">문의하기</h2><p>앱 이용과 지원에 관한 문의는 이메일로 보내주세요.</p></div>
+        <a class="button" href="mailto:edns801@kakao.com">edns801@kakao.com</a>
+      </section>
+    </main>
+    <footer>© 2026 EDNS Soft</footer>
+  </div>
+</body>
+</html>
