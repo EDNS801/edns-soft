@@ -14,10 +14,10 @@
     a { color:inherit; }
     a:focus-visible { outline:3px solid var(--blue); outline-offset:5px; }
     .wrap { width:min(1060px,calc(100% - 48px)); margin:auto; }
-    header { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:28px 0; }
+    header { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px; padding:28px 0; }
     .brand { display:flex; gap:12px; align-items:center; text-decoration:none; font-size:21px; font-weight:800; letter-spacing:-.5px; }
     .mark { display:grid; place-items:center; width:40px; height:40px; border-radius:12px; background:var(--blue); color:white; font-size:15px; letter-spacing:-1px; }
-    nav { display:flex; gap:25px; font-size:14px; font-weight:600; }
+    nav { display:flex; flex-wrap:wrap; gap:25px; font-size:14px; font-weight:600; }
     nav a { text-decoration:none; }
     nav a:hover { color:var(--blue); }
     .hero { padding:85px 0 82px; max-width:760px; }
@@ -42,7 +42,14 @@
     .contact p { margin:0; color:var(--muted); font-size:15px; }
     .button { display:inline-flex; align-items:center; justify-content:center; min-height:50px; padding:12px 23px; border-radius:12px; background:var(--ink); color:white; text-decoration:none; font-size:14px; font-weight:600; white-space:nowrap; }
     .button:hover { background:var(--blue); }
-    footer { padding:24px 0 30px; border-top:1px solid var(--line); color:var(--muted); font-size:12px; }
+    .privacy-links { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:22px 30px; padding:34px; margin-top:38px; border:1px solid var(--line); border-radius:20px; background:#fff; }
+    .privacy-links h2 { font-size:24px; margin:0 0 8px; }
+    .privacy-links p { margin:0; color:var(--muted); font-size:15px; }
+    .privacy-actions { display:flex; flex-wrap:wrap; gap:10px; }
+    .button.secondary { background:white; color:var(--ink); border:1px solid var(--line); }
+    .button.secondary:hover { color:var(--blue); border-color:var(--blue); }
+    .privacy-footer-links { display:flex; flex-wrap:wrap; gap:8px 18px; }
+    footer { display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px 24px; padding:24px 0 30px; border-top:1px solid var(--line); color:var(--muted); font-size:12px; }
     @media (max-width:700px) {
       .wrap { width:calc(100% - 36px); }
       header { padding:23px 0; }
@@ -53,6 +60,7 @@
       h1 { letter-spacing:-1.3px; }
       .intro { font-size:16px; }
       .app { grid-template-columns:1fr; gap:26px; padding:28px 24px; border-radius:22px; }
+      .privacy-links { padding:26px 24px; }
       .contact { flex-direction:column; align-items:flex-start; gap:22px; padding:45px 0; }
       .button { white-space:normal; overflow-wrap:anywhere; }
     }
@@ -63,7 +71,7 @@
   <div class="wrap">
     <header>
       <a class="brand" href="#home" aria-label="EDNS Soft 홈"><span class="mark" aria-hidden="true">ES</span>EDNS Soft</a>
-      <nav aria-label="메인 메뉴"><a href="#kintory">앱 소개</a><a href="#contact">문의</a></nav>
+      <nav aria-label="메인 메뉴"><a href="#kintory">앱 소개</a><a href="#privacy">개인정보</a><a href="#contact">문의</a></nav>
     </header>
     <main id="home">
       <section class="hero" aria-labelledby="headline">
@@ -89,12 +97,19 @@
           </ul>
         </div>
       </section>
+      <section class="privacy-links" id="privacy" aria-labelledby="privacy-heading">
+        <div><h2 id="privacy-heading">킨토리 개인정보처리방침</h2><p>개인정보 처리와 보관·삭제 방법을 안내합니다.</p></div>
+        <div class="privacy-actions">
+          <a class="button" href="privacy.html" lang="ko">한국어</a>
+          <a class="button secondary" href="privacy-en.html" lang="en">English</a>
+        </div>
+      </section>
       <section class="contact" id="contact" aria-labelledby="contact-heading">
         <div><h2 id="contact-heading">문의하기</h2><p>앱 이용과 지원에 관한 문의는 이메일로 보내주세요.</p></div>
         <a class="button" href="mailto:edns801@kakao.com">edns801@kakao.com</a>
       </section>
     </main>
-    <footer>© 2026 EDNS Soft</footer>
+    <footer><span>© 2026 EDNS Soft</span><div class="privacy-footer-links"><a href="privacy.html" lang="ko">개인정보처리방침</a><a href="privacy-en.html" lang="en">Privacy Policy</a></div></footer>
   </div>
 </body>
 </html>
